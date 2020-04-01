@@ -1,21 +1,44 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useState } from 'react';
+import { setConfig /* , cold */ } from 'react-hot-loader';
+import { Link } from 'gatsby';
+import SEO from '../components/seo';
+import '../style/index.css';
+import Login from '../components/login';
+import video from '../images/originfinal.mp4';
+import { motion } from 'framer-motion';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+/* import Img from "gatsby-image" */
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+setConfig({ pureSFC: true });
+/*This is your landing page should contain signup and sign in options, */
+
+const innerWidth = window.innerWidth;
+const IndexPage = () => {
+  return (
+    <div className='container'>
+      <SEO title='Home' keywords={[`gatsby`, `application`, `react`]} />
+      <motion.div animate={{ scale: 2 }}>
+        <aside className='motto'>Dream, Plan, Execute</aside>
+      </motion.div>
+      <div className='content'>
+        <div className='title'>RISE</div>
+        <h1 className='subtitleOne'>Dream, Plan, Execute</h1>
+        <h1 className='subtitleTwo'>Personal dream planner</h1>
+        <Login className='loginStyle'></Login>
+      </div>
+      <section className='video'>
+        <video
+          autoPlay
+          loop
+          className='video-background'
+          muted
+          plays-inline='true'
+        >
+          <source src={video} type='video/mp4' />
+        </video>
+      </section>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+  );
+};
 
-export default IndexPage
+export default IndexPage;

@@ -60,7 +60,7 @@ body {
   text-decoration: none;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1398px) {
   .video-background {
     position: absolute;
     right: 0;
@@ -73,7 +73,7 @@ body {
 
   .container {
     grid-template-columns: 2fr 5fr;
-    grid-template-areas: 'aside content';
+    grid-template-areas: "aside content";
   }
 
   .title {
@@ -81,17 +81,33 @@ body {
     font-size: 300px;
     letter-spacing: 18px;
     text-align: center;
-    color: white;
+    color: whitesmoke;
+    margin-top: 10%;
   }
 
   aside {
+    display: grid;
     font-family: franchise;
-    font-size: 50px;
+    font-size: 6em;
     color: whitesmoke;
-
     grid-area: aside;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin-left: -15%;
   }
 
+  .dream {
+    letter-spacing: 18px;
+  }
+
+  .plan {
+    letter-spacing: 33px;
+  }
+
+  .execute {
+    letter-spacing: 5px;
+  }
   .subtitleOne {
     display: none;
   }
@@ -119,7 +135,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
+@media only screen and (min-width: 600px) and (max-width: 1398px) {
   .video-background {
     display: none;
   }

@@ -12,7 +12,6 @@ import { motion } from "framer-motion"
 setConfig({ pureSFC: true })
 /*This is your landing page should contain signup and sign in options, */
 
-const innerWidth = window.innerWidth
 const IndexPage = () => {
   return (
     <div className="container">

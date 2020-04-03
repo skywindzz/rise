@@ -1,3 +1,7 @@
+:root {
+  --font-color: whitesmoke;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -29,24 +33,9 @@ body {
   justify-items: center;
 }
 
-.nav {
-  grid-area: navigation;
-  height: 50px;
-  display: flex;
-  justify-content: flex-end;
-  flex-flow: row wrap;
-  background-color: green;
-  align-items: center;
-  opacity: 0.5;
-  background-color: white;
-  position: sticky;
-}
-
 .loginStyle {
   border: none;
   text-decoration: none;
-  margin-right: 2em;
-  font-size: 1em;
   outline: none;
   background: transparent;
 }
@@ -81,32 +70,38 @@ body {
     font-size: 300px;
     letter-spacing: 18px;
     text-align: center;
-    color: whitesmoke;
-    margin-top: 10%;
+    color: var(--font-color);
   }
 
   aside {
     display: grid;
+    grid-area: aside;
+    grid-template-areas:
+      "dream"
+      "plan"
+      "execute";
     font-family: franchise;
     font-size: 6em;
-    color: whitesmoke;
-    grid-area: aside;
+    color: var(--font-color);
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
-    margin-left: -15%;
   }
 
   .dream {
     letter-spacing: 18px;
+    grid-area: dream;
   }
 
   .plan {
     letter-spacing: 33px;
+    grid-area: plan;
   }
 
   .execute {
     letter-spacing: 5px;
+    grid-area: execute;
   }
   .subtitleOne {
     display: none;
@@ -116,7 +111,7 @@ body {
     font-family: franchise;
     font-size: 50px;
     text-align: center;
-    color: whitesmoke;
+    color: var(--font-color);
   }
 
   .loginStyle {
@@ -124,13 +119,13 @@ body {
     font-size: 50px;
     text-align: center;
     margin-left: 140px;
-    color: whitesmoke;
+    color: var(--font-color);
+    margin-top: 10%;
   }
 
   .content {
-    margin-top: 10%;
-    margin-left: 55%;
-    min-height: 100vh;
+    margin-top: 13%;
+    margin-left: 45%;
     grid-area: content;
   }
 }
@@ -148,11 +143,12 @@ body {
     z-index: 0;
     min-height: 100vh;
     background-image: url(../images/climb1.jpeg);
-
-    grid-area: content;
-    grid-template-rows: 1fr min-content;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "content";
     background-size: 100% 100%;
-    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
   }
 
   .title {
@@ -185,7 +181,7 @@ body {
   }
 
   .content {
-    margin-top: 1%;
+    grid-area: content;
     min-height: 100vh;
   }
 
@@ -213,8 +209,7 @@ body {
     min-height: 100vh;
     grid-area: content;
     grid-template-rows: 1fr min-content;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .title {

@@ -1,32 +1,32 @@
-import React, { useState } from 'react';
-import { setConfig /* , cold */ } from 'react-hot-loader';
-import { Link } from 'gatsby';
-import '../style/index.css';
-import Logout from '../components/logout';
-import { FaAutoprefixer } from 'react-icons/fa';
-import Img from 'gatsby-image';
+import React, { useState } from "react"
+import { setConfig /* , cold */ } from "react-hot-loader"
+import { Link } from "gatsby"
+import "../style/index.css"
+import Logout from "../components/logout"
+import { FaAutoprefixer } from "react-icons/fa"
+import Img from "gatsby-image"
 
-setConfig({ pureSFC: true });
+setConfig({ pureSFC: true })
 
 const IndexPage = () => {
-  const [test, changeTest] = useState('hello');
+  const [test, changeTest] = useState("hello")
 
   function sayCheese() {
-    changeTest('Cheese');
+    changeTest("Cheese")
   }
 
   return (
     <div
       css={{
-        fontFamily: 'Helvetica Neue'
+        fontFamily: "Helvetica Neue",
       }}
     >
       <div
         css={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr 1fr 1fr',
-          gridTemplateRows: '100vh',
-          gridTemplateAreas: ` 'profile plan habit daily' `
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr 1fr",
+          gridTemplateRows: "100vh",
+          gridTemplateAreas: ` 'profile plan habit daily' `,
         }}
         onClick={sayCheese}
       >
@@ -37,15 +37,15 @@ const IndexPage = () => {
 
         <div
           css={{
-            backgroundColor: 'blue',
-            gridArea: 'profile',
-            display: 'grid',
-            justifyItems: 'center'
+            backgroundColor: "blue",
+            gridArea: "profile",
+            display: "grid",
+            justifyItems: "center",
           }}
         >
           <span
             css={{
-              margin: '0 auto'
+              margin: "0 auto",
             }}
           >
             user profile
@@ -54,36 +54,35 @@ const IndexPage = () => {
           {/*check for gatsby udemy example and fill this out  <Img /> */}
           <span
             css={{
-              display: 'block',
-              width: '250px',
-              height: '250px',
-              borderRadius: '50%',
-              backgroundColor: 'white'
+              display: "block",
+              width: "250px",
+              height: "250px",
+              borderRadius: "50%",
+              backgroundColor: "white",
             }}
           ></span>
-          <p css={{ margin: '0 auto' }}>Name</p>
-          <p css={{ margin: '0 auto ' }}>
-            include highest habit streaks, total task completed
-          </p>
-          <Link to='/'>
-            <Logout></Logout>
-          </Link>
+          <p css={{ margin: "0 auto" }}>Name</p>
+          <div css={{ marginLeft: "-35%" }}>
+            <Link to="/">
+              <Logout></Logout>
+            </Link>
+          </div>
         </div>
 
         <div
           css={{
-            backgroundColor: 'hotpink',
-            '&:hover': {
-              color: 'lightgreen'
+            backgroundColor: "hotpink",
+            "&:hover": {
+              color: "lightgreen",
             },
             marginTop: 0,
             marginBottom: 0,
             marginLeft: 0,
             marginRight: 0,
-            gridArea: 'plan'
+            gridArea: "plan",
           }}
         >
-          <Link to='/planning'>Planning</Link>
+          <Link to="/planning">Planning</Link>
           <p>
             shows what user have inputed for the planning page, encourgae user
             to read it daily to remind them why they are doing this
@@ -92,11 +91,11 @@ const IndexPage = () => {
 
         <div
           css={{
-            backgroundColor: 'lightGreen',
-            gridArea: 'habit'
+            backgroundColor: "lightGreen",
+            gridArea: "habit",
           }}
         >
-          <Link to='/habit'>Habit page</Link>
+          <Link to="/habit">Habit page</Link>
           <p>
             checkboxes for tracking daily habits and also track how many
             consequtive days a person can do the habit(maybe add some graphic
@@ -106,12 +105,12 @@ const IndexPage = () => {
 
         <div
           css={{
-            display: 'flex',
-            gridArea: 'daily',
-            justifyContent: 'space-evenly'
+            display: "flex",
+            gridArea: "daily",
+            justifyContent: "space-evenly",
           }}
         >
-          <span css={{ marginRight: '120px' }}>Daily</span>
+          <span css={{ marginRight: "120px" }}>Daily</span>
           <p>
             daily needs a component, not it's own page, people can directly do
             their 3D1M and cross them out when done. 3 task 1 must checkboxes
@@ -120,7 +119,7 @@ const IndexPage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage

@@ -8,16 +8,6 @@ body {
   display: grid;
   overflow: hidden;
   grid-template-columns: 1fr;
-
-  /* might want to look for another background
-    background: linear-gradient(rgba(37,35,35,0.5), rgba(37, 35, 35, 0.5)), url('../images/stone-water-ripple-clipart-10-1170x658.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    */
 }
 
 .container {
@@ -136,13 +126,7 @@ body {
   }
 
   .container {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    z-index: 0;
-    min-height: 100vh;
-    background-image: url(../images/climb1.jpeg);
+    background-image: url(../images/risemountain2.jpeg);
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "content";
@@ -200,15 +184,10 @@ body {
   }
 
   .container {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
+    background-size: 100% 100%;
     z-index: 0;
-    background-image: url(../images/workout1.jpeg);
-    min-height: 100vh;
+    background-image: url(../images/riseworkout.jpeg);
     grid-area: content;
-    grid-template-rows: 1fr min-content;
     background-size: cover;
   }
 

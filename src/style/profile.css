@@ -1,0 +1,131 @@
+/*not using it now because conflict between pages */
+
+:root {
+  --font-color: whitesmoke;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 1398px) {
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: "1fr 1fr 1fr 1fr";
+    grid-template-rows: 1fr;
+    grid-template-areas: "profile plan habit daily";
+  }
+
+  .profile {
+    background-color: blue;
+    grid-area: profile;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .plan {
+    background-color: hotpink;
+    grid-area: plan;
+  }
+
+  .habit {
+    background-color: lightGreen;
+    grid-area: habit;
+  }
+
+  .daily {
+    background-color: white;
+    grid-area: daily;
+  }
+
+  .userphoto {
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: white;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1398px) {
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: "1fr 1fr 1fr 1fr";
+    grid-template-rows: 1fr;
+    grid-template-areas: "profile plan habit daily";
+  }
+
+  .profile {
+    background-color: blue;
+    grid-area: profile;
+    display: grid;
+    justify-items: center;
+  }
+
+  .plan {
+    background-color: hotpink;
+    grid-area: plan;
+  }
+
+  .habit {
+    background-color: lightGreen;
+    grid-area: habit;
+  }
+
+  .daily {
+    background-color: white;
+    grid-area: daily;
+  }
+
+  .userphoto {
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: white;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: "1fr";
+    grid-template-rows: "1fr 1fr 1fr 1fr";
+    grid-template-areas:
+      "profile"
+      "plan"
+      "habit"
+      "daily";
+  }
+
+  .profile {
+    background-image: none;
+    background-color: blue;
+    grid-area: profile;
+    display: grid;
+    justify-items: center;
+  }
+
+  .plan {
+    background-color: hotpink;
+    grid-area: plan;
+  }
+
+  .habit {
+    background-color: lightGreen;
+    grid-area: habit;
+  }
+
+  .daily {
+    background-color: green;
+    grid-area: daily;
+  }
+
+  .userphoto {
+    display: none;
+  }
+}

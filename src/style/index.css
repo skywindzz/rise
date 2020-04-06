@@ -28,6 +28,8 @@ body {
   text-decoration: none;
   outline: none;
   background: transparent;
+  font-family: franchise;
+  font-size: 50px;
 }
 
 * {
@@ -105,9 +107,6 @@ body {
   }
 
   .loginStyle {
-    font-family: franchise;
-    font-size: 50px;
-    text-align: center;
     margin-left: 140px;
     color: var(--font-color);
     margin-top: 10%;

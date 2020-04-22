@@ -68,7 +68,7 @@ export default class Auth {
 
   getUserName = () => {
     if (this.getUser()) {
-      return this.getUser().name
+      return this.getUser().names
     }
   }
 }

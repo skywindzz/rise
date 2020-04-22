@@ -6,6 +6,20 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-firebase",
+      options: {
+        credentials: {
+          apiKey: "AIzaSyDxdYoKotYgzilVBkZoxGdP4TMdvpCTkDU",
+          authDomain: "origin-6ffd4.firebaseapp.com",
+          databaseURL: "https://origin-6ffd4.firebaseio.com",
+          projectId: "origin-6ffd4",
+          storageBucket: "origin-6ffd4.appspot.com",
+          messagingSenderId: "972356305673",
+          appId: "1:972356305673:web:70e32a265e14d0414fc9d8",
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-emotion`,
       options: {
         // Accepts all options defined by `babel-plugin-emotion` plugin.

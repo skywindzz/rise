@@ -10,7 +10,7 @@
     "auth0-js": "^9.13.0",
     "firebase": "^7.14.1",
     "framer-motion": "^1.10.3",
-    "gatsby": "^2.19.45",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.2.44",
     "gatsby-plugin-emotion": "^4.2.1",
     "gatsby-plugin-firebase": "^0.2.0-beta.4",
